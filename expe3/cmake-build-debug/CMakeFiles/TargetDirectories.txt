@@ -1,0 +1,3 @@
+/home/changkaiyan/linuxexperiment/expe3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/changkaiyan/linuxexperiment/expe3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/changkaiyan/linuxexperiment/expe3/cmake-build-debug/CMakeFiles/expe3.dir
