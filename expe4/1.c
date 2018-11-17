@@ -11,11 +11,6 @@
 extern int errorno;
 int main(int args,char**argv)
 {
-	if(args<3)
-	{
-		printf("应用程序错误,参数错误.");
-		return 1;
-	}
 	char*source=argv[1];
 	char*destination=argv[2];
 	int sourcelength=strlen(source);
@@ -53,7 +48,7 @@ int main(int args,char**argv)
 			if(option=='y')
 				fd=open(destination,O_WRONLY|O_CREAT|O_TRUNC,0xff);
 			else
-				fd=open(destination,O_APPEND|O_WRONLY,0xff);
+				fd=open(destination,O_APPEND|O_WRONLY);
 		}
 		char ch;
 		
@@ -82,9 +77,9 @@ int main(int args,char**argv)
 			return 1;
 		}
 		char*filename;
-		while(*p1!='/'&&p1-source>=0)
+		while(*p1!='/')
 			p1--;
-		filename=p1+1;
+		filename=p1;
 		struct dirent* dirp;
 		is_exit=false;
 		while((dirp=readdir(di))!=NULL)
@@ -95,7 +90,7 @@ int main(int args,char**argv)
 				break;
 			}
 		}
-		char option;
+		char option='y';
 		if(is_exit==true)
 		{
 			printf("覆盖for y；合并 for n");
@@ -109,7 +104,7 @@ int main(int args,char**argv)
 		if(option=='y')
 		{
 		
-		fd=open(path,O_WRONLY|O_CREAT|O_TRUNC,0xff);
+		fd=open(path,O_WRONLY|O_CREAT|O_TRUNC,0xffff);
 		char ch;
 		if(closedir(di)==-1)
 			perror("destination");
@@ -124,7 +119,7 @@ int main(int args,char**argv)
 		}
 		else
 		{
-			fd=open(path,O_APPEND|O_WRONLY,0xff);
+			fd=open(path,O_APPEND|O_WRONLY,0xffff);
 			char ch;
 			if(closedir(di)==-1)
 				perror("destination");

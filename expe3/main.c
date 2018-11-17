@@ -8,6 +8,7 @@
 #include <grp.h>
 #include <time.h>
 #include <string.h>
+
 #define SHOW_P 0x01
 #define SHOW_A 0x02
 #define SHOW_S 0x04
@@ -118,7 +119,7 @@ int main(int argc, char** argv)
         pad=getpwuid(buf.st_uid);
         gp=getgrgid(buf.st_gid);
         tim=localtime(&buf.st_mtim);
-        printf("%s %s %d %d-%d-%d %d:%d %s\n", pad->pw_name,gp->gr_name,buf.st_size,\
+        printf("%s %s %d %d-%d-%d %d:%02d %s\n", pad->pw_name,gp->gr_name,buf.st_size,\
         tim->tm_year+1900,tim->tm_mon,tim->tm_mday,tim->tm_hour,tim->tm_min,now_file);
     }
 

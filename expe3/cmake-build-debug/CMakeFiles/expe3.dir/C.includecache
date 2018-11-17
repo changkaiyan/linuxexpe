@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/changkaiyan/linuxexperiment/expe3/main.c
+/home/changkaiyan/linuxexperiment/linuxexpe/expe3/main.c
 stdio.h
 -
 unistd.h
