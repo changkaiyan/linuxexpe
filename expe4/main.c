@@ -9,11 +9,14 @@
 #include <time.h>
 #include <string.h>
 #include <wait.h>
+#include <pthread.h>
+
 #define SHOW_P 0x01
 #define SHOW_A 0x02
 #define SHOW_S 0x04
 #define SHOW_I 0x08
 int main(int argc,char**argv) {
+
     int8_t flag=0;
     for(int i=0;i<argc;++i)//Assign the flag bit
     {
@@ -66,6 +69,7 @@ int main(int argc,char**argv) {
             {
                 execl("/home/changkaiyan/linuxexperiment/linuxexpe/expe4/mycp","mycp",filename,"/home/changkaiyan/changkaiyan",NULL);
                 exit(EXIT_SUCCESS);
+
             }
 
 

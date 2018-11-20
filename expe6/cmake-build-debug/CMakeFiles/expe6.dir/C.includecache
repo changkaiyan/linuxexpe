@@ -6,29 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/changkaiyan/linuxexperiment/linuxexpe/expe4/main.c
+/home/changkaiyan/linuxexperiment/linuxexpe/expe6/main.c
 stdio.h
 -
-unistd.h
--
-dirent.h
+pthread.h
 -
 stdlib.h
 -
-sys/types.h
--
-sys/stat.h
--
-pwd.h
--
-grp.h
--
-time.h
--
-string.h
--
-wait.h
--
-pthread.h
+unistd.h
 -
 

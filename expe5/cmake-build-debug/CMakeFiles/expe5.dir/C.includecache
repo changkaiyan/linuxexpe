@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/changkaiyan/linuxexperiment/linuxexpe/expe4/main.c
+/home/changkaiyan/linuxexperiment/linuxexpe/expe5/main.c
+pthread.h
+-
 stdio.h
 -
 unistd.h
@@ -28,7 +30,5 @@ time.h
 string.h
 -
 wait.h
--
-pthread.h
 -
 
